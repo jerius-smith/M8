@@ -20,31 +20,6 @@ public class Planet {
     private Resource resource;
     private Government politicalSystem;
     private Market market;
-    private SolarSystem solarSystemCurrentlyIn;
-
-    public double getxLoc() {
-        return xLoc;
-    }
-
-    public void setxLoc(double xLoc) {
-        this.xLoc = xLoc;
-    }
-
-    public double getyLoc() {
-        return yLoc;
-    }
-
-    public void setyLoc(double yLoc) {
-        this.yLoc = yLoc;
-    }
-
-    public SolarSystem getSolarSystemCurrentlyIn() {
-        return solarSystemCurrentlyIn;
-    }
-
-    public void setSolarSystemCurrentlyIn(SolarSystem solarSystemCurrentlyIn) {
-        this.solarSystemCurrentlyIn = solarSystemCurrentlyIn;
-    }
 
     /**
      * Instantiates a new Planet.
@@ -59,10 +34,6 @@ public class Planet {
         resource = Resource.values()[new Random().nextInt(Resource.numElements())];
         politicalSystem = null;
         market = new Market(this);
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override
@@ -97,8 +68,19 @@ public class Planet {
         return techLevel;
     }
 
+    public double getxLoc() {
+        return xLoc;
+    }
+
+    public double getyLoc() {
+        return yLoc;
+    }
+
     public Market getPlanetsMarket() {
         return market;
     }
 
+    public String getName() {
+        return name;
+    }
 }

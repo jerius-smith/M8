@@ -16,6 +16,10 @@ import static java.lang.Math.floor;
  */
 public class SolarSystem {
 
+    public String getName() {
+        return name;
+    }
+
     private String name;
     private double xLoc;
     private double yLoc;
@@ -34,7 +38,6 @@ public class SolarSystem {
         for (int i = 0; i < NUM_PLANETS; i++) {
             Planet planet = new Planet(GameLogistics.PLANET_NAMES[new Random()
                     .nextInt(GameLogistics.PLANET_NAMES.length)]);
-            planet.setSolarSystemCurrentlyIn(this);
             planets.add(planet);
         }
 

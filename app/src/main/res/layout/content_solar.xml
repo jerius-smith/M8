@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/star032"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.gatech.cs2340.spacetraders.views.SolarActivity"
+    tools:showIn="@layout/activity_solar">
+
+    <TextView
+        android:id="@+id/credits_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/screen_percentage_10"
+        android:layout_marginRight="@dimen/screen_percentage_10"
+        android:fontFamily="@font/inconsolata"
+        android:text="Credits: 1000"
+        android:textColor="@color/tan"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/screen_percentage_10"
+        android:layout_marginTop="@dimen/screen_percentage_10"
+        android:fontFamily="@font/inconsolata"
+        android:text="Solar System: Sombero"
+        android:textColor="@color/tan"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/travel_button"
+        android:layout_width="164dp"
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/travel2_bttn" />
+
+
+    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_text"
+        android:layout_weight="3"
+        android:background="@color/light_green"
+        android:paddingBottom="@dimen/screen_percentage_05">
+
+        <TextView
+            android:id="@+id/planet_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/inconsolata"
+            android:text="Planet"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </TableRow>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/planet_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="90dp"
+        android:background="@color/light_green"
+        android:paddingBottom="@dimen/screen_percentage_05"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

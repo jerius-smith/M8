@@ -1,15 +1,15 @@
 package edu.gatech.cs2340.spacetraders.model;
+
 import android.content.Context;
-import android.util.Log;
+
+import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import com.google.gson.Gson;
-
+import java.util.Date;
 import java.util.Scanner;
 
 public class DataStore {
@@ -114,5 +114,9 @@ public class DataStore {
 
     public static Player getCurrentPlayer(Context context) throws FileNotFoundException {
         return jsonToPlayer(context, getCurrentPlayerTxt(context) + "_player.json");
+    }
+
+    public static Universe getCurrentUniverse(Context context) throws FileNotFoundException {
+        return jsonToUniverse(context, getCurrentPlayerTxt(context) + "_universe.json");
     }
 }
